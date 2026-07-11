@@ -1,8 +1,10 @@
 import { createClient } from 'redis';
 import { activeRooms } from './wss.js';
+import dotenv from 'dotenv';
+dotenv.config();
 
 
-const pubClient = createClient({ url: 'redis://localhost:6379' });
+const pubClient = createClient({ url: process.env.REDIS_URL });
 const subClient = pubClient.duplicate();
 
 pubClient.on('error', (err) => console.error('Redis Pub Client Error', err));
