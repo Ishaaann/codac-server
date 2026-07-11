@@ -3,6 +3,7 @@ import express from 'express';
 import { setUpWebSocketServer } from './websockets/wss.js';
 import { connectToRedis } from './websockets/pubsub.js';
 import mongoose from 'mongoose';
+import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
 
