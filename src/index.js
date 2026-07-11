@@ -7,9 +7,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const dbPassword = process.env.mongo_db_password;
-const dbUser = process.env.mongo_db_user || 'ishaanraj3219_db_user';
-const mongoUri = process.env.MONGO_URI || `mongodb+srv://${dbUser}:${dbPassword}@cluster0.x2u0gfr.mongodb.net/`;
-
+const dbUser = process.env.mongo_db_user;
+const mongoUri = process.env.MONGO_URI;
 const app = express();
 const port  = process.env.PORT || 8000;
 
