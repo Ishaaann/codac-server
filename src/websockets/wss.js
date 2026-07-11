@@ -95,14 +95,11 @@ function setUpWebSocketServer(server) {
 
             if (payload.type === 'execute') {
                 try {
-                    // Send the raw code to the OnlineCompiler.io synchronous endpoint
-                    // Send the raw code to the OnlineCompiler.io synchronous endpoint
-                    // Send the raw code to the OnlineCompiler.io synchronous endpoint
                     const response = await fetch('https://api.onlinecompiler.io/api/run-code-sync/', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
-                            'Authorization': process.env.ONLINE_COMPILER_API_KEY 
+                            'Authorization': process.env.ONLINE_COMPILER_API_KEY
                         },
                         body: JSON.stringify({
                             compiler: 'typescript-deno', 

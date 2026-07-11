@@ -14,7 +14,7 @@ const port  = process.env.PORT || 8000;
 
 app.use(express.json());
 app.use(cors({
-    origin: 'https://codac-editor.vercel.app' // NO trailing slash at the end!
+    origin: 'https://codac-editor.vercel.app'
 }));
 
 app.get('/health', (req, res) => {
